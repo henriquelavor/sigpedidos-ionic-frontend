@@ -25,10 +25,13 @@ export class CategoriasPage {
   ionViewDidLoad() {
     this.categoriaService.findAll()
     .subscribe(response => {
-      //console.log(response);
       this.items = response;
     }, error =>{
-      //console.log(error);
     });
   }
+
+  showProdutos() {
+    this.navCtrl.push('ProdutosPage');    
+  }
+  
 }
